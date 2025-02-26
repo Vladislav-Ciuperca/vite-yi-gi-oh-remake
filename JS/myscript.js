@@ -36,7 +36,6 @@ createApp({
     },
     methods: {
         changeImage(target) {
-            // ho deciso di fare il carodello con l'opearatore %
             if (target == 'dx') {
                 this.clickIndex = (this.clickIndex + 1) % this.files.length
             }
@@ -46,3 +45,4 @@ createApp({
         }
     }
 }).mount('#app')
+
