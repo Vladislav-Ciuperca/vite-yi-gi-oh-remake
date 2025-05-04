@@ -22,8 +22,8 @@ export default {
     },
     created() {
         axios.get("https://db.ygoprodeck.com/api/v7/cardinfo.php?&fname=mage").then(risultato => {
-            this.Store.pageCards = risultato.data.data
             console.log(risultato.data.data);
+            this.Store.pageCards = risultato.data.data
 
         })
     },
@@ -36,11 +36,10 @@ export default {
 
 <template>
     <AppHeader :NavLinks="['primoLink', 'secondo', 'terzo', 'quarto']"
-        :HeaderLinks="['altrolink', 'secondoB', 'terzoB', 'quartoB']"
-        LogoTitle="Logo/Title"></AppHeader>
+        :HeaderLinks="['altrolink', 'secondoB', 'terzoB', 'quartoB']" LogoTitle="Logo/Title"></AppHeader>
     <AppContent></AppContent>
     <AppFooter></AppFooter>
-    <pre>{{ Store.pageCards }}</pre>
+
 </template>
 
 <style>

@@ -1,12 +1,14 @@
 <script>
 export default {
     props: {
-        NavLinks :Array,
-        HeaderLinks :Array,
+        nome : String,
+        id : String,
+        type : String,
+        attribute : String,
+        img : String,
     },
     data() {
         return {
-            //   placeholder
         };
     },
     methods: {
@@ -19,60 +21,27 @@ export default {
 </script>
 
 <template>
-    <header class="df">
-        <!-- left -->
-
-        <div class="cont left df">
-            <ul class="df">
-                <li>NavLinks</li>
-                <li>NavLinks</li>
-                <li>NavLinks</li>
-                <li>NavLinks</li>
-                <li>NavLinks</li>
-            </ul>
-        </div>
-        <!-- mid -->
-        <div class="cont mid df">
-            <h1>logo/titolo</h1>
-        </div>
-        <!-- right -->
-        <div class="cont right df">
-            <ul class="df">
-                <li>links</li>
-                <li>links</li>
-                <li>links</li>
-                <li>links</li>
-                <li>links</li>
-            </ul>
-        </div>
-    </header>
+   <div class="card">
+    <div class="name">quiname</div>
+    <div class="imgContainer">
+        <img :src="img " alt="">
+    </div>
+    <div class="desc">quidesc</div>
+   </div>
 </template>
 
 <style scoped>
-header {
-    padding: 1rem 4rem;
-    justify-content: space-between;
-    border: 2px dashed blue;
-    background: rgba(0, 0, 255, 0.253);
 
+.card{
+    border: 2px dashed purple;
+    width: 100%;
+    /* width: calc(100% / 3 - 4rem); */
 }
 
-.df {
-    display: flex;
+.imgContainer{
+    border: 2px dashed fuchsia;
 }
 
-.cont {
-    border: 2px dashed red;
-}
-
-ul {
-    justify-content: space-around;
-    gap: 1rem;
-    list-style-type: none;
-    align-items: center;
-}
-
-li {
-    cursor: pointer;
-}
+img{
+    width: 100%;
 </style>
